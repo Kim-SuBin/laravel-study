@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
+});
+
+Route::get('/contact', function() {
+    return view('contact');
+});
+
+Route::get('/book', function () {
+    $books = [
+        'Harry Potter',
+        '<script>alert("Hello")</script>'
+    ];
+//    return view('book', [
+//        'books' => $books
+//    ]);
+//    return view('book')->with([
+//        'books' => $books
+//    ]);
+    return view('book')->withBooks($books);
 });
