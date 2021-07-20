@@ -8,10 +8,7 @@
 
     </head>
     <body class="antialiased">
-        <ul>
-            <li><a href="/welcome">Welcome</a> </li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    @yield('content')
+        @include('category')
+        @yield('content')
     </body>
 </html>
