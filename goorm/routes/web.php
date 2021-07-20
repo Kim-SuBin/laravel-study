@@ -18,3 +18,5 @@ Route::get('/welcome', 'HomeController@welcome');
 Route::get('/contact', 'HomeController@contact');
 
 Route::get('/book', 'HomeController@bookList');
+
+Route::get('/projects', 'ProjectController@index');
